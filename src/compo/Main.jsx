@@ -14,14 +14,14 @@ const Main = () => {
       <div className='main'>
         <div className='nav'>
           <p>ShivaSakha</p>
-          <BiUser  />
+          <BiUser />
         </div>
         <div className="main-container">
            
            {!showResult? <>
             <div className='greet'>
             <p><span>Namasta Dosto</span></p>
-            <p>Ma ap ki kese shayta kar sakta hu</p>
+            <p>Mai aapke kaise sahayta kar sakta hu?</p>
           </div>
            </>:<div className='result'>
                  <div className="result-title">
@@ -30,21 +30,18 @@ const Main = () => {
                  <div className="result-data">
                   <img src={im} />
                   {loading ? <Loader></Loader>:
-                  <p dangerouslySetInnerHTML={{__html:resultData}}> </p>
+                  <p dangerouslySetInnerHTML={{__html:resultData}}></p>
                   }
                  </div>
             </div>
            
 
             }
-
-          
-
           <div className='min-center'>
-            <div className='search-box'  >
+            <div className='search-box'>
               <input  onChange={(e)=>setInput(e.target.value)} value={input} />
               <div>
-              <BiSend type='sumbit' onClick={()=> onSent()} ></BiSend>
+              <BiSend onClick={()=> onSent()} ></BiSend>
               </div>
             </div>
           </div>
